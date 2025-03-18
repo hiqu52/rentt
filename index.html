@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rental Website</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="logo">Rent Wheels</div>
+    <div class="hamburger" id="hamburger">
+        <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="nav-links">
+        <!-- Cross button placeholder -->
+        <li class="close-btn-container" id="close-btn-container"></li>
+        <!-- Menu items -->
+        <li><a href="#home">Home</a></li>
+        <li class="dropdown">
+            <a href="#vehicles">Vehicles <i class="fas fa-caret-down"></i></a>
+            <ul class="dropdown-menu">
+                <li><a href="#luxury-cars">Luxury Cars</a></li>
+                <li><a href="#bullet-proof">Bullet Proof</a></li>
+                <li><a href="#cars">Cars</a></li>
+            </ul>
+        </li>
+        <li><a href="#instant-quote">Instant Quote</a></li>
+        <li><a href="#book-online">Book Online</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#about-us">About Us</a></li>
+        <li><a href="#contact-us">Contact Us</a></li>
+    </ul>
+</nav>
+
+    <!-- Home Section -->
+<section id="home" class="home-section">
+    <div class="home-content">
+        <h1>Welcome to Rent Wheels</h1>
+        <p class="subheading">Your Journey, Your Way</p>
+        <p>Find the best cars for your journey. Book now and enjoy the ride!</p>
+        <div class="cta-buttons">
+            <button class="book-now" onclick="callAPI()">Book Now</button>
+            <button class="explore-more" onclick="scrollToSection('booking-form')">Explore More</button>
+        </div>
+        <div class="featured-cars">
+            <h2>Featured Cars</h2>
+            <div class="car-list">
+                <div class="car-item">
+                    <img src="luxury-sedan.webp" alt="Luxury Car">
+                    <p>Luxury Sedan</p>
+                </div>
+                <div class="car-item">
+                    <img src="SUV.jfif" alt="SUV">
+                    <p>SUV</p>
+                </div>
+                <div class="car-item">
+                    <img src="sportscar.jfif" alt="Sports Car">
+                    <p>Sports Car</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    <!-- Car Images Section -->
+<section id="car-images" class="car-images-section">
+    <h2>Explore Our Fleet</h2>
+    <div class="car-grid">
+        <!-- Car 1 -->
+        <div class="car-card">
+            <img src="land cruser bulet proof.jfif" alt="Land Cruiser Bullet Proof">
+            <div class="car-overlay">
+                <h3>Land Cruiser Bullet Proof</h3>
+                <p class="car-price">$150/day</p>
+               <a href="land cruser bulet proof.html"> <button class="book-now-btn">Book Now</button></a>
+            </div>
+        </div>
+        <!-- Car 2 -->
+        <div class="car-card">
+            <img src="honda city.jfif" alt="Honda City">
+            <div class="car-overlay">
+                <h3>Honda City</h3>
+                <p class="car-price">$45/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+        <!-- Car 3 -->
+        <div class="car-card">
+            <img src="hillux.jfif" alt="Toyota Hilux Vigo">
+            <div class="car-overlay">
+                <h3>Toyota Hilux Vigo</h3>
+                <p class="car-price">$70/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+        <!-- Car 4 -->
+        <div class="car-card" id="luxury-cars">
+            <img src="kia-sportage.jfif" alt="Kia Sportage">
+            <div class="car-overlay">
+                <h3>Kia Sportage</h3>
+                <p class="car-price">$60/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+        <!-- Car 5 -->
+        <div class="car-card">
+            <img src="parado.jfif" alt="Land Cruiser Prado">
+            <div class="car-overlay">
+                <h3>Land Cruiser Prado</h3>
+                <p class="car-price">$120/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+        <!-- Car 6 -->
+        <div class="car-card">
+            <img src="gli.jfif" alt="Toyota Corolla Gli">
+            <div class="car-overlay">
+                <h3>Toyota Corolla Gli</h3>
+                <p class="car-price">$55/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+        <!-- Car 7 -->
+        <div class="car-card">
+            <img src="every.jfif" alt="Suzuki Every">
+            <div class="car-overlay">
+                <h3>Suzuki Every</h3>
+                <p class="car-price">$40/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+        <!-- Car 8 -->
+        <div class="car-card">
+            <img src="suzui-alto.jfif" alt="Suzuki Alto">
+            <div class="car-overlay">
+                <h3>Suzuki Alto</h3>
+                <p class="car-price">$30/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+        <!-- Car 9 -->
+        <div class="car-card">
+            <img src="honda civic vti oreal.jfif" alt="Honda Civic">
+            <div class="car-overlay">
+                <h3>Honda Civic VTI Oreal</h3>
+                <p class="car-price">$50/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+        <!-- Car 10 -->
+        <div class="car-card">
+            <img src="toyota-vitz.jfif" alt="Toyota Vitz">
+            <div class="car-overlay">
+                <h3>Toyota Vitz</h3>
+                <p class="car-price">$40/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+        <!-- Car 11 -->
+        <div class="car-card">
+            <img src="Toyota-Corolla.jpeg" alt="Toyota Corolla">
+            <div class="car-overlay">
+                <h3>Toyota Corolla</h3>
+                <p class="car-price">$50/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+        <!-- Car 12 -->
+        <div class="car-card">
+            <img src="mehran.jfif" alt="Suzuki Mehran">
+            <div class="car-overlay">
+                <h3>Suzuki Mehran</h3>
+                <p class="car-price">$25/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+        <!-- Car 13 -->
+        <div class="car-card">
+            <img src="suzuki-cultus.jfif" alt="Suzuki Cultus">
+            <div class="car-overlay">
+                <h3>Suzuki Cultus</h3>
+                <p class="car-price">$35/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+        <!-- Car 14 -->
+        <div class="car-card">
+            <img src="suzuki-cultus.jfif" alt="Suzuki Cultus">
+            <div class="car-overlay">
+                <h3>Suzuki Cultus</h3>
+                <p class="car-price">$35/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+        <!-- Car 15 -->
+        <div class="car-card">
+            <img src="sedan.jfif" alt="Sedan">
+            <div class="car-overlay">
+                <h3>Sedan</h3>
+                <p class="car-price">$50/day</p>
+                <button class="book-now-btn" onclick="scrollToBookingForm()">Book Now</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <!-- Booking Form -->
+<section id="booking-form" class="booking-form">
+    <h2>Book Your Car</h2>
+    <form>
+        <!-- Form Row: Name, Email, Phone -->
+        <div class="form-row">
+            <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" required>
+            </div>
+        </div>
+
+        <!-- Submit Button -->
+        <button type="submit" class="book-now-btn">Send Message</button>
+    </form>
+</section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#vehicles">Vehicles</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#about-us">About Us</a></li>
+                    <li><a href="#contact-us">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Us</h3>
+                <ul class="socials">
+                    <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Us</h3>
+                <ul>
+                    <li><i class="fas fa-envelope"></i> info@carrental.com</li>
+                    <li><i class="fas fa-phone"></i> +123 456 7890</li>
+                    <li><i class="fas fa-map-marker-alt"></i> 123 Street, City, Country</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2023 Car Rental. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Sticky WhatsApp Button -->
+    <a href="https://wa.me/1234567890" class="whatsapp-button" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="script.js"></script>
+</body>
+</html>

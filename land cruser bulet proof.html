@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Land Cruiser Bulletproof Specifications</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* Header */
+        header {
+            background-color: #2c3e50; /* Dark blue-gray */
+            padding: 20px 40px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+        }
+
+        .logo img {
+            height: 50px;
+            margin-right: 15px;
+        }
+
+        .logo h1 {
+            font-size: 24px;
+            color: #ff5b29; /* Orange accent */
+            margin: 0;
+            font-weight: bold;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 40px;
+            background-color: #fff;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            border-radius: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            animation: fadeIn 1s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Car Image Section */
+        .car-image {
+            flex: 1;
+            min-width: 300px;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .car-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .car-image img:hover {
+            transform: scale(1.05);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Car Specifications Section */
+        .car-specs {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .car-specs h1 {
+            font-size: 42px;
+            margin-bottom: 20px;
+            color: #2c3e50; /* Dark blue-gray */
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .car-specs p {
+            font-size: 18px;
+            margin-bottom: 30px;
+            color: #555;
+        }
+
+        .spec-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 30px;
+        }
+
+        .spec-table th,
+        .spec-table td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+
+        .spec-table th {
+            background-color: #2c3e50; /* Dark blue-gray */
+            color: #fff;
+            font-weight: bold;
+        }
+
+        .spec-table td {
+            font-size: 16px;
+            color: #555;
+        }
+
+        .spec-table i {
+            color: #ff5b29; /* Orange accent */
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        /* Book Now Button */
+        .book-now-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            font-size: 18px;
+            font-weight: bold;
+            background: linear-gradient(135deg, #ff5b29, #e64a19); /* Gradient orange */
+            color: white;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .book-now-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50; /* Dark blue-gray */
+            color: #fff;
+            padding: 20px 40px;
+            text-align: center;
+            margin-top: 50px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+
+        footer .social-links {
+            margin-top: 10px;
+        }
+
+        footer .social-links a {
+            color: #fff;
+            font-size: 20px;
+            margin: 0 10px;
+            transition: color 0.3s ease;
+        }
+
+        footer .social-links a:hover {
+            color: #ff5b29; /* Orange accent */
+        }
+
+        /* Responsive Styles */
+        @media (max-width: 760px) {
+            header {
+                flex-direction: column;
+                text-align: center;
+                padding: 20px;
+                width: 110%;
+            }
+
+            .logo {
+                margin-bottom: 15px;
+            }
+
+            .container {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+                width: 110%;
+            }
+
+            .car-image,
+            .car-specs {
+                width: 100%;
+            }
+
+            .car-specs h1 {
+                font-size: 32px;
+            }
+
+            .car-specs p {
+                font-size: 16px;
+            }
+
+            .spec-table th,
+            .spec-table td {
+                padding: 12px;
+                font-size: 14px;
+            }
+
+            .book-now-btn {
+                width: 30%; /* Full width on mobile */
+                text-align: center;
+            }
+            footer{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="company-logo.png" alt="Company Logo">
+            <h1>Rent Wheels</h1>
+        </div>
+    </header>
+
+    <!-- Container -->
+    <div class="container">
+        <!-- Car Image -->
+        <div class="car-image">
+            <img src="land-cruiser-bulletproof.jpg" alt="Land Cruiser Bulletproof">
+        </div>
+
+        <!-- Car Specifications -->
+        <div class="car-specs">
+            <h1>Land Cruiser Bulletproof</h1>
+            <p>Experience unmatched safety and luxury with the Land Cruiser Bulletproof. Designed for high-profile individuals, this vehicle offers top-tier protection without compromising on comfort or performance.</p>
+            
+            <table class="spec-table">
+                <tr>
+                    <th><i class="fas fa-shield-alt"></i>Armor Level</th>
+                    <td>BR6 (Bulletproof, Explosion Resistant)</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-tachometer-alt"></i>Top Speed</th>
+                    <td>200 km/h</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-gas-pump"></i>Fuel Efficiency</th>
+                    <td>8 km/l</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-cogs"></i>Transmission</th>
+                    <td>Automatic</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-users"></i>Seating Capacity</th>
+                    <td>5</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-car"></i>Engine</th>
+                    <td>4.5L V8 Diesel</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-palette"></i>Color Options</th>
+                    <td>Black, White, Gray</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-weight-hanging"></i>Weight</th>
+                    <td>3,500 kg</td>
+                </tr>
+                <tr>
+                    <th><i class="fas fa-shield-virus"></i>Additional Features</th>
+                    <td>Run-Flat Tires, Emergency Oxygen System</td>
+                </tr>
+            </table>
+
+            <!-- Book Now Button -->
+            <a href="booking.html" class="book-now-btn">Book Now</a>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2023 Rent Wheels. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook"></i></a>
+            <a href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+        </div>
+    </footer>
+</body>
+</html>
